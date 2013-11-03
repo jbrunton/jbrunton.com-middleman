@@ -47,9 +47,15 @@
 #   end
 # end
 
-set :css_dir, 'stylesheets'
+set :css_dir, 'scss'
 
-set :js_dir, 'javascripts'
+set :js_dir, 'js'
+
+after_configuration do
+  foundation_path = Gem::Specification.find_by_name('zurb-foundation').gem_dir
+  sprockets.append_path File.join(foundation_path, 'js', 'foundation')
+  sprockets.append_path File.join(foundation_path, 'js', 'vendor')
+end
 
 set :images_dir, 'images'
 
