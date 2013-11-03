@@ -3,3 +3,4 @@
 source 'http://rubygems.org'
 
 gem "middleman", "~>3.2.0"
+gem "zurb-foundation", "~> 4.0.2"
