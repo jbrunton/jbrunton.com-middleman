@@ -47,14 +47,17 @@
 #   end
 # end
 
+activate :directory_indexes
+
+set :build_dir, "tmp"
+
 set :css_dir, 'scss'
 
 set :js_dir, 'js'
 
 after_configuration do
   foundation_path = Gem::Specification.find_by_name('zurb-foundation').gem_dir
-  sprockets.append_path File.join(foundation_path, 'js', 'foundation')
-  sprockets.append_path File.join(foundation_path, 'js', 'vendor')
+  sprockets.append_path File.join(foundation_path, 'js')
 end
 
 set :images_dir, 'images'

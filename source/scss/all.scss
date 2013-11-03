@@ -1,6 +1,14 @@
 $body-bg: #E9E7E0;
 $body-font-family: Georgia, "Times New Roman", Times, serif;
+
 $header-font-family: Georgia, "Times New Roman", Times, serif;
+
+$topbar-bg: #333;
+$topbar-sticky-class: ".sticky";
+
+header {
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, .6);
+}
 
 @import "foundation";
 
